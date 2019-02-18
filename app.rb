@@ -17,3 +17,10 @@ get '/named-cat' do
   @randomname = params[:name]
   erb :index
 end
+
+get '/cat-form' do
+  '<form method="get" action="/named-cat">
+    <input type="text" name="name">
+    <input type="submit" name="submit" value="Submit cat">
+  </form>'
+end
