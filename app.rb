@@ -13,13 +13,13 @@ get '/random-cat' do
   erb :index
 end
 
-get '/named-cat' do
+post '/named-cat' do
   @randomname = params[:name]
   erb :index
 end
 
 get '/cat-form' do
-  '<form method="get" action="/named-cat">
+  '<form method="post" action="/named-cat">
     <input type="text" name="name">
     <input type="submit" name="submit" value="Submit cat">
   </form>'
